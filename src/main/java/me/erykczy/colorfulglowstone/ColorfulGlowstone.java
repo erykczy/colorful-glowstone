@@ -21,11 +21,18 @@ public class ColorfulGlowstone
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(ColorfulGlowstone::registerBlockColorHandler);
+        modEventBus.addListener(ColorfulGlowstone::registerItemColorHandler);
     }
 
     private static void registerBlockColorHandler(RegisterColorHandlersEvent.Block event) {
         for(var dyeColor : DyeColor.values()) {
-            event.register((state, level, pos, tintIndex) -> DyeColor.RED.getTextureDiffuseColor(), ModBlocks.GLOWSTONES.get(dyeColor).get());
+            event.register((state, level, pos, tintIndex) -> dyeColor.getTextColor(), ModBlocks.GLOWSTONES.get(dyeColor).get());
+        }
+    }
+
+    private static void registerItemColorHandler(RegisterColorHandlersEvent.Item event) {
+        for(var dyeColor : DyeColor.values()) {
+            event.register((stack, tintIndex) -> dyeColor.getTextColor(), ModBlocks.GLOWSTONE_BLOCK_ITEMS.get(dyeColor).get());
         }
     }
 }
