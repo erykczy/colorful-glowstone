@@ -12,8 +12,12 @@ public class DatagenHandler {
         var generator = event.getGenerator();
         var output = generator.getPackOutput();
         var fileHelper = event.getExistingFileHelper();
+        var lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(output, ColorfulGlowstone.MODID, fileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(output, ColorfulGlowstone.MODID, fileHelper));
+
+        var blockTagsProvider = generator.addProvider(event.includeServer(), new ModBlockTagsProvider(output, lookupProvider, ColorfulGlowstone.MODID, fileHelper));
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter()));
     }
 }
