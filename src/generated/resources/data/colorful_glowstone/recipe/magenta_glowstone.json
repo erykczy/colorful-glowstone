@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "colorful_glowstone:craft_glowstone",
+  "key": {
+    "#": {
+      "item": "colorful_glowstone:magenta_glowstone_dust"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colorful_glowstone:magenta_glowstone"
+  }
+}

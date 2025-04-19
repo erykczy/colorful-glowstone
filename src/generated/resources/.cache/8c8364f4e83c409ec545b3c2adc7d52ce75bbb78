@@ -1,0 +1,17 @@
+// 1.21.1	2025-04-19T16:23:39.5866819	Tags for minecraft:item mod id vanilla
+ed5185c4f9aa5a02114c386cd8a2562b3b5fa766 data/c/tags/item/dusts/glowstone.json
+d80ccd0f00c39a524cb7bd0b4cb16acbd52c2725 data/c/tags/item/dyed/blue.json
+d0c5925498877c0f86be0b8338dca6c0eeb2240d data/c/tags/item/dyed/brown.json
+07f0db1929cf96d1fa70a15486b62631cd91dfc0 data/c/tags/item/dyed/cyan.json
+8049e8b178c45cb05d0ef480f458b901ad414a11 data/c/tags/item/dyed/gray.json
+a2ea1d39b3cacd635c17a88dbdb09746963835e4 data/c/tags/item/dyed/green.json
+671803d3cc0ab50febb4ecbad6443df6f6e91add data/c/tags/item/dyed/light_blue.json
+1d5964cafcf72df1f7207bb6e01ed4911e059ad0 data/c/tags/item/dyed/light_gray.json
+d04effe36de6f9f0bbcf87a547a7d82a2e218c74 data/c/tags/item/dyed/lime.json
+40aee01b212419c7525386e32ae9a06ce27e49d0 data/c/tags/item/dyed/magenta.json
+e73e5d77232429c67354a7cf6b850136f53177d2 data/c/tags/item/dyed/orange.json
+8e08c27c99bcc977d8eb19e06362443c82d46703 data/c/tags/item/dyed/pink.json
+a467e8061e34df9f45e7c0cc5617c86febd357aa data/c/tags/item/dyed/purple.json
+d53e5cd731af98f05f81b6b8488aef98add598a8 data/c/tags/item/dyed/red.json
+9121c4bed5a9ab06c5a07c326c0d198b1a99ba68 data/c/tags/item/dyed/white.json
+cc50978a3a1313aa0defca4b511cc560d016b1da data/c/tags/item/dyed/yellow.json

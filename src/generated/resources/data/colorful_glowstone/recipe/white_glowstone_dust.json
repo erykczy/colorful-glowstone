@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "colorful_glowstone:glowstone_dust",
+  "key": {
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "G": {
+      "tag": "c:dusts/glowstone"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GDG",
+    " G "
+  ],
+  "result": {
+    "count": 4,
+    "id": "colorful_glowstone:white_glowstone_dust"
+  }
+}

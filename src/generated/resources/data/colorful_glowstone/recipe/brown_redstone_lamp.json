@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "colorful_glowstone:redstone_lamp",
+  "key": {
+    "G": {
+      "item": "colorful_glowstone:brown_glowstone"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    }
+  },
+  "pattern": [
+    " R ",
+    "RGR",
+    " R "
+  ],
+  "result": {
+    "count": 1,
+    "id": "colorful_glowstone:brown_redstone_lamp"
+  }
+}

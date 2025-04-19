@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "colorful_glowstone:dye_glowstone",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_dye"
+    },
+    [
+      {
+        "item": "colorful_glowstone:orange_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:blue_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:light_blue_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:lime_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:red_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:gray_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:yellow_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:green_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:pink_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:purple_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:light_gray_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:cyan_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:white_glowstone"
+      },
+      {
+        "item": "colorful_glowstone:brown_glowstone"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "colorful_glowstone:magenta_glowstone"
+  }
+}
