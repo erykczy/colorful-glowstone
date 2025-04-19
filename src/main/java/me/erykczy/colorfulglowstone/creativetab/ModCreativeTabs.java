@@ -6,9 +6,12 @@ import me.erykczy.colorfulglowstone.block.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -19,20 +22,38 @@ public class ModCreativeTabs {
             .title(Component.translatable("itemGroup." + ColorfulGlowstone.MODID + ".colorful_glowstone"))
             .icon(() -> new ItemStack(ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.get(DyeColor.RED).get()))
             .displayItems((params, output) -> {
-                for(var entry : ModBlocks.GLOWSTONE_BLOCK_ITEMS.entrySet()) {
+                for(var entry : ModBlocks.GLOWSTONE_BLOCK_ITEMS.entrySet())
                     output.accept(entry.getValue().get());
-                }
-                for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet()) {
+                for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet())
                     output.accept(entry.getValue().get());
-                }
-                for(var entry : ModItems.GLOWSTONE_DUST_ITEMS.entrySet()) {
+                for(var entry : ModItems.GLOWSTONE_DUST_ITEMS.entrySet())
                     output.accept(entry.getValue().get());
-                }
             })
             .build()
     );
 
     public static void register(IEventBus bus) {
         CREATIVE_MODE_TABS.register(bus);
+        bus.addListener(ModCreativeTabs::buildContents);
+    }
+
+    @SubscribeEvent
+    private static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
+            for(var entry : ModBlocks.GLOWSTONE_BLOCK_ITEMS.entrySet())
+                event.accept(entry.getValue().get());
+            for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet())
+                event.accept(entry.getValue().get());
+        }
+        if( event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS ||
+            event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS
+        ) {
+            for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet())
+                event.accept(entry.getValue().get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            for(var entry : ModItems.GLOWSTONE_DUST_ITEMS.entrySet())
+                event.accept(entry.getValue().get());
+        }
     }
 }
