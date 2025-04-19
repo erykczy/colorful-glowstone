@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "colorful_glowstone:block/brown_redstone_lamp"
+    },
+    "lit=true": {
+      "model": "colorful_glowstone:block/brown_redstone_lamp"
+    }
+  }
+}

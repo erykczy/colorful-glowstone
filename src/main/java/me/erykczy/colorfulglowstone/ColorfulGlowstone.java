@@ -17,25 +17,9 @@ import java.util.List;
 @Mod(ColorfulGlowstone.MODID)
 public class ColorfulGlowstone
 {
-    public static final String MODID = "colorfulglowstone";
+    public static final String MODID = "colorful_glowstone";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public static final List<DyeColor> SUPPORTED_DYE_COLORS = Collections.unmodifiableList(Arrays.asList(
-        DyeColor.WHITE,
-        DyeColor.LIGHT_GRAY,
-        DyeColor.GRAY,
-        DyeColor.BROWN,
-        DyeColor.RED,
-        DyeColor.ORANGE,
-        DyeColor.YELLOW,
-        DyeColor.LIME,
-        DyeColor.GREEN,
-        DyeColor.CYAN,
-        DyeColor.LIGHT_BLUE,
-        DyeColor.BLUE,
-        DyeColor.PURPLE,
-        DyeColor.MAGENTA,
-        DyeColor.PINK
-    ));
+    public static final List<DyeColor> SUPPORTED_DYE_COLORS = List.of(DyeColor.WHITE, DyeColor.LIGHT_GRAY, DyeColor.GRAY, DyeColor.BROWN, DyeColor.RED, DyeColor.ORANGE, DyeColor.YELLOW, DyeColor.LIME, DyeColor.GREEN, DyeColor.CYAN, DyeColor.LIGHT_BLUE, DyeColor.BLUE, DyeColor.PURPLE, DyeColor.MAGENTA, DyeColor.PINK);
 
     public ColorfulGlowstone(IEventBus modEventBus, ModContainer modContainer)
     {
