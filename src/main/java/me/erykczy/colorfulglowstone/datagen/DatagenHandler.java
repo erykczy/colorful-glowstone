@@ -19,5 +19,7 @@ public class DatagenHandler {
 
         var blockTagsProvider = generator.addProvider(event.includeServer(), new ModBlockTagsProvider(output, lookupProvider, ColorfulGlowstone.MODID, fileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter()));
+
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(output, lookupProvider));
     }
 }
