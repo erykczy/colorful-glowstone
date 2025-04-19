@@ -1,0 +1,6 @@
+{
+  "parent": "colorfulglowstone:block/tinted_cube_all",
+  "textures": {
+    "all": "minecraft:block/redstone_lamp_on"
+  }
+}

@@ -10,29 +10,36 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import org.slf4j.Logger;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 @Mod(ColorfulGlowstone.MODID)
 public class ColorfulGlowstone
 {
     public static final String MODID = "colorfulglowstone";
     private static final Logger LOGGER = LogUtils.getLogger();
+    public static final List<DyeColor> SUPPORTED_DYE_COLORS = Collections.unmodifiableList(Arrays.asList(
+        DyeColor.WHITE,
+        DyeColor.LIGHT_GRAY,
+        DyeColor.GRAY,
+        DyeColor.BROWN,
+        DyeColor.RED,
+        DyeColor.ORANGE,
+        DyeColor.YELLOW,
+        DyeColor.LIME,
+        DyeColor.GREEN,
+        DyeColor.CYAN,
+        DyeColor.LIGHT_BLUE,
+        DyeColor.BLUE,
+        DyeColor.PURPLE,
+        DyeColor.MAGENTA,
+        DyeColor.PINK
+    ));
 
     public ColorfulGlowstone(IEventBus modEventBus, ModContainer modContainer)
     {
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
-        modEventBus.addListener(ColorfulGlowstone::registerBlockColorHandler);
-        modEventBus.addListener(ColorfulGlowstone::registerItemColorHandler);
-    }
-
-    private static void registerBlockColorHandler(RegisterColorHandlersEvent.Block event) {
-        for(var dyeColor : DyeColor.values()) {
-            event.register((state, level, pos, tintIndex) -> dyeColor.getTextColor(), ModBlocks.GLOWSTONES.get(dyeColor).get());
-        }
-    }
-
-    private static void registerItemColorHandler(RegisterColorHandlersEvent.Item event) {
-        for(var dyeColor : DyeColor.values()) {
-            event.register((stack, tintIndex) -> dyeColor.getTextColor(), ModBlocks.GLOWSTONE_BLOCK_ITEMS.get(dyeColor).get());
-        }
     }
 }
