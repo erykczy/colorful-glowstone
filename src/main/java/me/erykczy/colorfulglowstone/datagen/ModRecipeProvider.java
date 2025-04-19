@@ -5,11 +5,13 @@ import me.erykczy.colorfulglowstone.block.ModBlocks;
 import me.erykczy.colorfulglowstone.block.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -42,17 +44,18 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
         for(var dyeColor : ColorfulGlowstone.SUPPORTED_DYE_COLORS) {
+            // dye glowstone dust
             ShapedRecipeBuilder
                     .shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_DUST_ITEMS.get(dyeColor), 4)
                     .define('D', DYES.get(dyeColor))
-                    .define('G', Tags.Items.DUSTS_GLOWSTONE)
+                    .define('G', Items.GLOWSTONE_DUST)
                     .pattern(" G ")
                     .pattern("GDG")
                     .pattern(" G ")
                     .unlockedBy("has_glowstone_dust", has(Tags.Items.DUSTS_GLOWSTONE))
-                    .group("colorful_glowstone:glowstone_dust")
                     .save(recipeOutput);
 
+            // craft glowstone from dust
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLOWSTONE_BLOCK_ITEMS.get(dyeColor), 1)
                     .define('#', ModItems.GLOWSTONE_DUST_ITEMS.get(dyeColor))
                     .pattern("##")
@@ -61,6 +64,7 @@ public class ModRecipeProvider extends RecipeProvider {
                     .group("colorful_glowstone:craft_glowstone")
                     .save(recipeOutput);
 
+            // craft redstone lamp from glowstone
             ShapedRecipeBuilder
                     .shaped(RecipeCategory.REDSTONE, ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.get(dyeColor), 1)
                     .define('G', ModBlocks.GLOWSTONE_BLOCK_ITEMS.get(dyeColor))
@@ -73,7 +77,14 @@ public class ModRecipeProvider extends RecipeProvider {
                     .save(recipeOutput);
         }
 
-        colorBlockWithDye(recipeOutput, DYES.values().stream().toList(), ModBlocks.GLOWSTONE_BLOCK_ITEMS.values().stream().map(DeferredItem::asItem).toList(), "colorful_glowstone:dye_glowstone");
-        colorBlockWithDye(recipeOutput, DYES.values().stream().toList(), ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.values().stream().map(DeferredItem::asItem).toList(), "colorful_glowstone:dye_redstone_lamp");
+        // color glowstone
+        var dyeableGlowstones = new java.util.ArrayList<>(ModBlocks.GLOWSTONE_BLOCK_ITEMS.values().stream().map(DeferredItem::asItem).toList());
+        dyeableGlowstones.add(Items.GLOWSTONE);
+        colorBlockWithDye(recipeOutput, DYES.values().stream().toList(), dyeableGlowstones, "colorful_glowstone:dye_glowstone");
+
+        // color redstone lamp
+        var dyeableRedstoneLamps = new java.util.ArrayList<>(ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.values().stream().map(DeferredItem::asItem).toList());
+        dyeableRedstoneLamps.add(Items.REDSTONE_LAMP);
+        colorBlockWithDye(recipeOutput, DYES.values().stream().toList(), dyeableRedstoneLamps, "colorful_glowstone:dye_redstone_lamp");
     }
 }

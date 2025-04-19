@@ -8,46 +8,49 @@
     },
     [
       {
-        "item": "colorful_glowstone:orange_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:blue_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:magenta_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:light_blue_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:lime_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:red_redstone_lamp"
-      },
-      {
         "item": "colorful_glowstone:gray_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:orange_redstone_lamp"
       },
       {
         "item": "colorful_glowstone:yellow_redstone_lamp"
       },
       {
-        "item": "colorful_glowstone:green_redstone_lamp"
+        "item": "colorful_glowstone:magenta_redstone_lamp"
       },
       {
-        "item": "colorful_glowstone:purple_redstone_lamp"
-      },
-      {
-        "item": "colorful_glowstone:light_gray_redstone_lamp"
+        "item": "colorful_glowstone:lime_redstone_lamp"
       },
       {
         "item": "colorful_glowstone:cyan_redstone_lamp"
       },
       {
-        "item": "colorful_glowstone:white_redstone_lamp"
+        "item": "colorful_glowstone:red_redstone_lamp"
       },
       {
         "item": "colorful_glowstone:brown_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:light_gray_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:green_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:white_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:blue_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:light_blue_redstone_lamp"
+      },
+      {
+        "item": "colorful_glowstone:purple_redstone_lamp"
+      },
+      {
+        "item": "minecraft:redstone_lamp"
       }
     ]
   ],

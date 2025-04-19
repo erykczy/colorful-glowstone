@@ -1,19 +1,19 @@
 {
   "values": [
-    "colorful_glowstone:orange_glowstone_dust",
-    "colorful_glowstone:blue_glowstone_dust",
-    "colorful_glowstone:magenta_glowstone_dust",
-    "colorful_glowstone:light_blue_glowstone_dust",
-    "colorful_glowstone:lime_glowstone_dust",
-    "colorful_glowstone:red_glowstone_dust",
     "colorful_glowstone:gray_glowstone_dust",
+    "colorful_glowstone:orange_glowstone_dust",
     "colorful_glowstone:yellow_glowstone_dust",
-    "colorful_glowstone:green_glowstone_dust",
-    "colorful_glowstone:pink_glowstone_dust",
-    "colorful_glowstone:purple_glowstone_dust",
-    "colorful_glowstone:light_gray_glowstone_dust",
+    "colorful_glowstone:magenta_glowstone_dust",
+    "colorful_glowstone:lime_glowstone_dust",
     "colorful_glowstone:cyan_glowstone_dust",
+    "colorful_glowstone:pink_glowstone_dust",
+    "colorful_glowstone:red_glowstone_dust",
+    "colorful_glowstone:brown_glowstone_dust",
+    "colorful_glowstone:light_gray_glowstone_dust",
+    "colorful_glowstone:green_glowstone_dust",
     "colorful_glowstone:white_glowstone_dust",
-    "colorful_glowstone:brown_glowstone_dust"
+    "colorful_glowstone:blue_glowstone_dust",
+    "colorful_glowstone:light_blue_glowstone_dust",
+    "colorful_glowstone:purple_glowstone_dust"
   ]
 }

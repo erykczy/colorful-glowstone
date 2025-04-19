@@ -1,13 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "colorful_glowstone:glowstone_dust",
   "key": {
     "D": {
       "item": "minecraft:blue_dye"
     },
     "G": {
-      "tag": "c:dusts/glowstone"
+      "item": "minecraft:glowstone_dust"
     }
   },
   "pattern": [
