@@ -16,7 +16,7 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ColorfulGlowstone.MODID);
     public static final Supplier<CreativeModeTab> COLORFUL_GLOWSTONE = CREATIVE_MODE_TABS.register("colorful_glowstone", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + ColorfulGlowstone.MODID + ".colorful_glowstone"))
-            .icon(() -> new ItemStack(ModBlocks.GLOWSTONE_BLOCK_ITEMS.get(DyeColor.LIGHT_BLUE).get()))
+            .icon(() -> new ItemStack(ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.get(DyeColor.RED).get()))
             .displayItems((params, output) -> {
                 for(var entry : ModBlocks.GLOWSTONE_BLOCK_ITEMS.entrySet()) {
                     output.accept(entry.getValue().get());

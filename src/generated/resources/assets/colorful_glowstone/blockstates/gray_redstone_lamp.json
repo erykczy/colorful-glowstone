@@ -4,7 +4,7 @@
       "model": "colorful_glowstone:block/gray_redstone_lamp"
     },
     "lit=true": {
-      "model": "colorful_glowstone:block/gray_redstone_lamp"
+      "model": "colorful_glowstone:block/gray_redstone_lamp_on"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "colorful_glowstone:block/tinted_cube_all",
   "textures": {
-    "all": "minecraft:block/glowstone"
+    "all": "colorful_glowstone:block/tinted_glowstone"
   }
 }

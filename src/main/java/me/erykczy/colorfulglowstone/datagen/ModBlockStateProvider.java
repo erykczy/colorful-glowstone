@@ -24,7 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         for(var entry : ModBlocks.REDSTONE_LAMP_BLOCKS.entrySet()) {
             Block block = entry.getValue().get();
             ModelFile model_off = models().withExistingParent(entry.getValue().getRegisteredName(), modLoc("block/tinted_redstone_lamp"));
-            ModelFile model_on = models().withExistingParent(entry.getValue().getRegisteredName(), modLoc("block/tinted_redstone_lamp_on"));
+            ModelFile model_on = models().withExistingParent(entry.getValue().getRegisteredName()+"_on", modLoc("block/tinted_redstone_lamp_on"));
             getVariantBuilder(block).forAllStates((blockState -> new ConfiguredModel[] {
                 new ConfiguredModel(blockState.getValue(RedstoneLampBlock.LIT) ? model_on : model_off)
             }));
