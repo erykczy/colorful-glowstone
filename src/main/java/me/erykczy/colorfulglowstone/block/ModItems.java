@@ -4,7 +4,6 @@ import me.erykczy.colorfulglowstone.ColorfulGlowstone;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -26,12 +25,5 @@ public class ModItems {
 
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
-        bus.addListener(ModItems::registerItemColorHandler);
-    }
-
-    private static void registerItemColorHandler(RegisterColorHandlersEvent.Item event) {
-        for(var entry : ModItems.GLOWSTONE_DUST_ITEMS.entrySet()) {
-            event.register((stack, tintIndex) -> ColorfulGlowstone.getColorFromDye(entry.getKey()), entry.getValue().get());
-        }
     }
 }

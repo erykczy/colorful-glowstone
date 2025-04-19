@@ -52,25 +52,5 @@ public class ModBlocks {
     public static void register(IEventBus bus) {
         BLOCKS.register(bus);
         BLOCK_ITEMS.register(bus);
-        bus.addListener(ModBlocks::registerBlockColorHandler);
-        bus.addListener(ModBlocks::registerItemColorHandler);
-    }
-
-    private static void registerBlockColorHandler(RegisterColorHandlersEvent.Block event) {
-        for(var entry : ModBlocks.GLOWSTONE_BLOCKS.entrySet()) {
-            event.register((state, level, pos, tintIndex) -> ColorfulGlowstone.getColorFromDye(entry.getKey()), entry.getValue().get());
-        }
-        for(var entry : ModBlocks.REDSTONE_LAMP_BLOCKS.entrySet()) {
-            event.register((state, level, pos, tintIndex) -> ColorfulGlowstone.getColorFromDye(entry.getKey()), entry.getValue().get());
-        }
-    }
-
-    private static void registerItemColorHandler(RegisterColorHandlersEvent.Item event) {
-        for(var entry : ModBlocks.GLOWSTONE_BLOCK_ITEMS.entrySet()) {
-            event.register((stack, tintIndex) -> ColorfulGlowstone.getColorFromDye(entry.getKey()), entry.getValue().get());
-        }
-        for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet()) {
-            event.register((stack, tintIndex) -> ColorfulGlowstone.getColorFromDye(entry.getKey()), entry.getValue().get());
-        }
     }
 }

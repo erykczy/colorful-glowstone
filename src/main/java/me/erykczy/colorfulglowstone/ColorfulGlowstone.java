@@ -3,6 +3,7 @@ package me.erykczy.colorfulglowstone;
 import com.mojang.logging.LogUtils;
 import me.erykczy.colorfulglowstone.block.ModBlocks;
 import me.erykczy.colorfulglowstone.block.ModItems;
+import me.erykczy.colorfulglowstone.colorhandler.ModColorHandler;
 import me.erykczy.colorfulglowstone.creativetab.ModCreativeTabs;
 import net.minecraft.util.FastColor;
 import net.minecraft.world.item.DyeColor;
@@ -28,13 +29,6 @@ public class ColorfulGlowstone
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
-    }
-
-    public static int getColorFromDye(DyeColor dyeColor) {
-        int color = dyeColor.getTextColor();
-        int red = FastColor.ARGB32.red(color);
-        int green = FastColor.ARGB32.green(color);
-        int blue = FastColor.ARGB32.blue(color);
-        return FastColor.ARGB32.opaque(color);
+        ModColorHandler.register(modEventBus);
     }
 }
