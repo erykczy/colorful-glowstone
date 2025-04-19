@@ -2,6 +2,7 @@ package me.erykczy.colorfulglowstone.creativetab;
 
 import me.erykczy.colorfulglowstone.ColorfulGlowstone;
 import me.erykczy.colorfulglowstone.block.ModBlocks;
+import me.erykczy.colorfulglowstone.block.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,9 @@ public class ModCreativeTabs {
                     output.accept(entry.getValue().get());
                 }
                 for(var entry : ModBlocks.REDSTONE_LAMP_BLOCK_ITEMS.entrySet()) {
+                    output.accept(entry.getValue().get());
+                }
+                for(var entry : ModItems.GLOWSTONE_DUST_ITEMS.entrySet()) {
                     output.accept(entry.getValue().get());
                 }
             })

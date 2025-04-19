@@ -31,5 +31,21 @@
   "block.colorful_glowstone.purple_redstone_lamp": "Purple Redstone Lamp",
   "block.colorful_glowstone.red_redstone_lamp": "Red Redstone Lamp",
   "block.colorful_glowstone.white_redstone_lamp": "White Redstone Lamp",
-  "block.colorful_glowstone.yellow_redstone_lamp": "Yellow Redstone Lamp"
+  "block.colorful_glowstone.yellow_redstone_lamp": "Yellow Redstone Lamp",
+
+  "item.colorful_glowstone.blue_glowstone_dust": "Blue Glowstone Dust",
+  "item.colorful_glowstone.brown_glowstone_dust": "Brown Glowstone Dust",
+  "item.colorful_glowstone.cyan_glowstone_dust": "Cyan Glowstone Dust",
+  "item.colorful_glowstone.gray_glowstone_dust": "Gray Glowstone Dust",
+  "item.colorful_glowstone.green_glowstone_dust": "Green Glowstone Dust",
+  "item.colorful_glowstone.light_blue_glowstone_dust": "Light Blue Glowstone Dust",
+  "item.colorful_glowstone.light_gray_glowstone_dust": "Light Gray Glowstone Dust",
+  "item.colorful_glowstone.lime_glowstone_dust": "Lime Glowstone Dust",
+  "item.colorful_glowstone.magenta_glowstone_dust": "Magenta Glowstone Dust",
+  "item.colorful_glowstone.orange_glowstone_dust": "Orange Glowstone Dust",
+  "item.colorful_glowstone.pink_glowstone_dust": "Pink Glowstone Dust",
+  "item.colorful_glowstone.purple_glowstone_dust": "Purple Glowstone Dust",
+  "item.colorful_glowstone.red_glowstone_dust": "Red Glowstone Dust",
+  "item.colorful_glowstone.white_glowstone_dust": "White Glowstone Dust",
+  "item.colorful_glowstone.yellow_glowstone_dust": "Yellow Glowstone Dust"
 }

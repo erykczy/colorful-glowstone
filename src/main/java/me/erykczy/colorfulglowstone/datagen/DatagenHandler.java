@@ -9,6 +9,11 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 public class DatagenHandler {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        event.getGenerator().addProvider(event.includeClient(), new ModBlockStateProvider(event.getGenerator().getPackOutput(), ColorfulGlowstone.MODID, event.getExistingFileHelper()));
+        var generator = event.getGenerator();
+        var output = generator.getPackOutput();
+        var fileHelper = event.getExistingFileHelper();
+
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(output, ColorfulGlowstone.MODID, fileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(output, ColorfulGlowstone.MODID, fileHelper));
     }
 }
